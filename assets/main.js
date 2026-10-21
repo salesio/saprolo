@@ -349,7 +349,7 @@ document.getElementById("footer").outerHTML = `
     <div><h4 data-i18n="ft_serv">Services</h4><ul><li><a href="services.html#sourcing" data-i18n="f1_t">Sourcing</a></li><li><a href="services.html#supply" data-i18n="f2_t">Supply</a></li><li><a href="services.html#logistics" data-i18n="f3_t">Logistics</a></li><li><a href="services.html#delivery" data-i18n="f4_t">Delivery</a></li></ul></div>
     <div><h4 data-i18n="ft_touch">Get in touch</h4><ul><li>${flagZA}128 11th Street, Parkmore, Sandton, JHB, 2196</li><li>${flagMZ}<span data-i18n="city_maputo">Maputo, Mozambique</span></li><li>${icPhone}<a href="tel:+27717629659">(+27) 71 762 9659</a> / <a href="tel:+27115348554">(011) 534 8554</a></li><li>${icMail}<a href="mailto:info@saprolo.co.za">info@saprolo.co.za</a></li></ul></div>
   </div>
-  <div class="bottom"><span>© ${new Date().getFullYear()} SAPROLO Procurement & Logistics. <span data-i18n="ft_rights">All rights reserved.</span></span><span><span data-i18n="ft_pow">Powered by</span> <b>Clapsa</b> · <span data-i18n="ft_made">Made by</span> <a href="https://salesio.github.io/portifolio/" target="_blank" rel="noopener"><b>Salésio Machava</b></a></span></div>
+  <div class="bottom"><span>© ${new Date().getFullYear()} SAPROLO Procurement & Logistics. <span data-i18n="ft_rights">All rights reserved.</span></span><span><span data-i18n="ft_pow">Powered by</span> <b>Clapsa</b> · <span data-i18n="ft_made">Made by</span> <a href="https://salesio.github.io/portifolio/" target="_blank" rel="noopener"><b style="color:#d8ff3e">Salésio Machava</b></a></span></div>
 </div></footer>`;
 
 // Rotating hero word
