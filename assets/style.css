@@ -25,6 +25,14 @@ img{max-width:100%;display:block}
 .topbar span{margin-right:1.4rem}
 .topbar a{transition:.2s}.topbar a:hover{color:var(--lime)}
 .topbar b{color:var(--lime);font-weight:600}
+.socials{display:inline-flex;align-items:center;gap:.45rem}
+.socials a{width:26px;height:26px;border-radius:7px;border:1px solid rgba(255,255,255,.22);display:inline-grid;place-items:center;color:#cfdcf5;transition:.2s}
+.socials a:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-1px)}
+.socials a svg{width:13px;height:13px;display:block}
+footer .socials{margin-top:1.1rem;gap:.6rem}
+footer .socials a{width:34px;height:34px;border-radius:9px;border:1.5px solid var(--green);color:var(--green)}
+footer .socials a svg{width:16px;height:16px}
+footer .socials a:hover{background:var(--green);color:#fff;border-color:var(--green)}
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header.site .container{display:flex;align-items:center;justify-content:space-between;height:78px}
 .brand img{height:58px;mix-blend-mode:multiply}

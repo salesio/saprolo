@@ -316,11 +316,16 @@ const t = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
 
 const icPhone = `<svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
 const icMail = `<svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`;
+const socialLinks = `<div class="socials">
+  <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+  <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+  <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+</div>`;
 
 document.getElementById("header").outerHTML = `
 <div class="topbar"><div class="container">
   <div><span>${flagZA}<span data-i18n="country_za">South Africa</span> <b>|</b> ${flagMZ}<span data-i18n="country_mz">Mozambique</span></span><span><a href="mailto:info@saprolo.co.za">${icMail}info@saprolo.co.za</a></span></div>
-  <div><span>${icPhone}<a href="tel:+27717629659">(+27) 71 762 9659</a> / <a href="tel:+27115348554">(011) 534 8554</a></span><span data-i18n="top_hours">Mon–Sat 07:00–18:00</span></div>
+  <div style="display:flex;align-items:center"><span>${icPhone}<a href="tel:+27717629659">(+27) 71 762 9659</a> / <a href="tel:+27115348554">(011) 534 8554</a></span><span data-i18n="top_hours">Mon–Sat 07:00–18:00</span>${socialLinks}</div>
 </div></div>
 <header class="site"><div class="container">
   <a class="brand" href="index.html"><img src="assets/logo.jpg" alt="SAPROLO Procurement & Logistics"></a>
@@ -339,7 +344,7 @@ document.getElementById("header").outerHTML = `
 document.getElementById("footer").outerHTML = `
 <footer><div class="container">
   <div class="cols">
-    <div><img class="flogo" src="assets/logo.jpg" alt="SAPROLO"><p data-i18n="ft_desc">Sourcing, supply, logistics and delivery between South Africa and Mozambique. On time, every time.</p></div>
+    <div><img class="flogo" src="assets/logo.jpg" alt="SAPROLO"><p data-i18n="ft_desc">Sourcing, supply, logistics and delivery between South Africa and Mozambique. On time, every time.</p>${socialLinks}</div>
     <div><h4 data-i18n="ft_comp">Company</h4><ul>${links.map(([h,k])=>`<li><a href="${h}" data-i18n="${k}">${t(k)}</a></li>`).join("")}</ul></div>
     <div><h4 data-i18n="ft_serv">Services</h4><ul><li><a href="services.html#sourcing" data-i18n="f1_t">Sourcing</a></li><li><a href="services.html#supply" data-i18n="f2_t">Supply</a></li><li><a href="services.html#logistics" data-i18n="f3_t">Logistics</a></li><li><a href="services.html#delivery" data-i18n="f4_t">Delivery</a></li></ul></div>
     <div><h4 data-i18n="ft_touch">Get in touch</h4><ul><li>${flagZA}128 11th Street, Parkmore, Sandton, JHB, 2196</li><li>${flagMZ}<span data-i18n="city_maputo">Maputo, Mozambique</span></li><li>${icPhone}<a href="tel:+27717629659">(+27) 71 762 9659</a> / <a href="tel:+27115348554">(011) 534 8554</a></li><li>${icMail}<a href="mailto:info@saprolo.co.za">info@saprolo.co.za</a></li></ul></div>
