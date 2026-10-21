@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAPROLO | Procurement & Logistics – South Africa & Mozambique</title>
+<meta name="description" content="Sourcing, supply, logistics and delivery between South Africa and Mozambique. Get an instant freight estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+<div id="header"></div>
+
+<section class="hero" id="calc"><div class="container">
+  <div>
+    <span class="tag" data-i18n="hero_tag">South Africa ⇄ Mozambique</span>
+    <h1><span data-i18n="hero_h1_top">One partner for</span><br><span class="rotate" id="rot">Sourcing</span><br><span data-i18n="hero_h1_bot">across the border.</span></h1>
+    <p class="lead" data-i18n="hero_lead">We source it, move it and deliver it. Procurement, freight, customs and last-mile delivery between South Africa and Mozambique, with one team accountable from order to doorstep.</p>
+    <div class="actions"><a class="btn btn-primary" href="services.html" data-i18n="hero_btn1">Our Services →</a><a class="btn btn-ghost" href="contact.html" data-i18n="hero_btn2">Talk to us</a></div>
+    <div class="stats"><div><b>2</b><span data-i18n="stat_countries">Countries</span></div><div><b>4</b><span data-i18n="stat_services">Connected services</span></div><div><b>1</b><span data-i18n="stat_account">Point of accountability</span></div></div>
+  </div>
+
+  <form class="calc">
+    <h3 data-i18n="calc_title">Instant Freight Estimate</h3>
+    <p class="sub" data-i18n="calc_sub">Get an indicative rate in seconds.</p>
+    <div class="seg">
+      <input type="radio" name="mode" id="m1" value="dropoff" checked><label for="m1"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg><span data-i18n="calc_drop">I'll drop at warehouse</span></label>
+      <input type="radio" name="mode" id="m2" value="collect"><label for="m2"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-i18n="calc_collect">Collect from me</span></label>
+    </div>
+    <div class="row r2">
+      <div class="f"><label for="c-from" data-i18n="calc_from">From</label><select id="c-from" name="from"></select></div>
+      <div class="f"><label for="c-to" data-i18n="calc_to">To</label><select id="c-to" name="to"></select></div>
+    </div>
+    <div class="row r4">
+      <div class="f"><label for="c-l" data-i18n="calc_l">L (cm)</label><input id="c-l" name="l" type="number" min="1" value="50" required></div>
+      <div class="f"><label for="c-w" data-i18n="calc_w">W (cm)</label><input id="c-w" name="w" type="number" min="1" value="40" required></div>
+      <div class="f"><label for="c-h" data-i18n="calc_h">H (cm)</label><input id="c-h" name="h" type="number" min="1" value="40" required></div>
+      <div class="f"><label for="c-qty" data-i18n="calc_qty">Qty</label><input id="c-qty" name="qty" type="number" min="1" value="1" required></div>
+    </div>
+    <div class="row r2">
+      <div class="f"><label for="c-kg" data-i18n="calc_kg">Weight per item (kg)</label><input id="c-kg" name="kg" type="number" min="0.1" step="0.1" value="20" required></div>
+      <div class="f"><label for="c-val" data-i18n="calc_val">Goods value (R)</label><input id="c-val" name="value" type="number" min="0" value="5000"></div>
+    </div>
+    <div class="chips">
+      <label class="chip"><input type="checkbox" name="express"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="calc_exp">Express</span></label>
+      <label class="chip"><input type="checkbox" name="fragile"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg><span data-i18n="calc_frag">Fragile</span></label>
+      <label class="chip"><input type="checkbox" name="insure" checked><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="calc_ins">Insurance</span></label>
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="calc_btn">Calculate Rate</button>
+    <div class="result"></div>
+  </form>
+</div></section>
+
+<section class="features"><div class="container"><div class="grid g4">
+  <a class="feat" href="services.html#sourcing"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><div><h4 data-i18n="f1_t">Sourcing</h4><p data-i18n="f1_d">Vetted suppliers, best price</p></div></a>
+  <a class="feat" href="services.html#supply"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></div><div><h4 data-i18n="f2_t">Supply</h4><p data-i18n="f2_d">Procurement for any project</p></div></a>
+  <a class="feat" href="services.html#logistics"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div><div><h4 data-i18n="f3_t">Logistics</h4><p data-i18n="f3_d">Freight, customs & storage</p></div></a>
+  <a class="feat" href="services.html#delivery"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><h4 data-i18n="f4_t">Delivery</h4><p data-i18n="f4_d">Collection to doorstep</p></div></a>
+</div></div></section>
+
+<section class="pad"><div class="container split">
+  <img class="reveal" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1100&q=70" alt="Truck on the N4">
+  <div class="reveal">
+    <span class="tag" data-i18n="why_tag">Why SAPROLO</span>
+    <h2 style="font-size:2.4rem;margin-bottom:1rem" data-i18n="why_h2">When supply stops, business stops.</h2>
+    <p style="color:var(--muted)" data-i18n="why_p">A missing part or a delayed load costs money every hour. We take care of finding, buying and moving what you need, so you can focus on running your business.</p>
+    <ul class="checks">
+      <li data-i18n="why_c1">We understand your operation before we quote</li>
+      <li data-i18n="why_c2">Customs clearing at Lebombo / Ressano Garcia handled</li>
+      <li data-i18n="why_c3">Free drop-off at our warehouse, or we collect</li>
+      <li data-i18n="why_c4">Measured by what we deliver, not what we promise</li>
+    </ul>
+    <a class="btn btn-primary" href="about.html" data-i18n="why_btn">About us →</a>
+  </div>
+</div></section>
+
+<section class="pad bg-soft"><div class="container">
+  <div class="head center reveal"><span class="tag" data-i18n="how_tag">How it works</span><h2 data-i18n="how_h2">From request to doorstep</h2></div>
+  <div class="grid g4">
+    <div class="card reveal"><span class="num">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3 data-i18n="s1_t">Request</h3><p data-i18n="s1_d">Tell us what you need, or get an instant estimate.</p></div>
+    <div class="card reveal"><span class="num">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h3 data-i18n="s2_t">Source</h3><p data-i18n="s2_d">We find, verify and buy the goods for you.</p></div>
+    <div class="card reveal"><span class="num">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3 data-i18n="s3_t">Ship & clear</h3><p data-i18n="s3_d">Road freight, documents and border clearing.</p></div>
+    <div class="card reveal"><span class="num">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3 data-i18n="s4_t">Deliver</h3><p data-i18n="s4_d">To your door or site, with proof of delivery.</p></div>
+  </div>
+</div></section>
+
+<section class="pad"><div class="container"><div class="corridor reveal">
+  <div class="head"><span class="tag" style="color:var(--lime)" data-i18n="cor_tag">The Maputo Corridor</span><h2 data-i18n="cor_h2">The shortest route from Gauteng to the sea</h2><p data-i18n="cor_p">We run along one of Southern Africa's busiest trade routes, the N4, which links South Africa's industrial heartland to the Port of Maputo.</p></div>
+  <div class="track">
+    <div class="stop"><i>1</i><b>Johannesburg</b><small data-i18n="st1">Gauteng hub</small></div>
+    <div class="stop"><i>2</i><b>Mbombela</b><small data-i18n="st2">N4 toll route</small></div>
+    <div class="stop"><i>3</i><b>Lebombo</b><small data-i18n="st3">SA border post</small></div>
+    <div class="stop"><i>4</i><b>Ressano Garcia</b><small data-i18n="st4">MZ border post</small></div>
+    <div class="stop"><i>5</i><b>Maputo</b><small data-i18n="st5">Port & city</small></div>
+  </div>
+  <div class="facts"><div><b>≈ 500 km</b><span data-i18n="fc1">Johannesburg to Maputo by road</span></div><div><b data-i18n="fc2_b">1 border</b><span data-i18n="fc2">Clearing handled for you</span></div><div><b data-i18n="fc3_b">Port access</b><span data-i18n="fc3">Deep-water Port of Maputo</span></div></div>
+</div></div></section>
+
+<section class="pad bg-soft"><div class="container split" style="align-items:start">
+  <div class="reveal"><span class="tag" data-i18n="ind_tag">Industries</span><h2 style="font-size:2.2rem;margin-bottom:1.5rem" data-i18n="ind_h2">What we move</h2>
+    <div class="chiplist"><span data-i18n="in1">Construction materials</span><span data-i18n="in2">Mining equipment</span><span data-i18n="in3">Electrical & solar</span><span data-i18n="in4">Agriculture</span><span data-i18n="in5">Vehicle parts</span><span data-i18n="in6">Food & beverage</span><span data-i18n="in7">PPE & tools</span><span data-i18n="in8">Retail stock</span><span data-i18n="in9">Machinery</span></div></div>
+  <div class="reveal"><span class="tag" data-i18n="cmp_tag">Compliance</span><h2 style="font-size:2.2rem;margin-bottom:1.5rem" data-i18n="cmp_h2">Paperwork, sorted</h2>
+    <div class="chiplist"><span data-i18n="cm1">Customs clearing</span><span data-i18n="cm2">Import & export documents</span><span data-i18n="cm3">Contra Marca (MZ)</span><span data-i18n="cm4">SADC certificates</span><span data-i18n="cm5">Permits</span><span data-i18n="cm6">Duty & duty-free</span><span data-i18n="cm7">Cargo insurance</span></div></div>
+</div></section>
+
+<section class="cta-photo"><div class="container reveal">
+  <h2 data-i18n="cta_h2">Tell us what you need. We'll handle the rest.</h2>
+  <p data-i18n="cta_p">Get a solution and a price. No obligation.</p>
+  <div class="actions"><a class="btn btn-primary" href="quote.html" data-i18n="cta_b1">Request a Quote →</a><a class="btn btn-ghost" href="https://wa.me/27717629659" target="_blank" rel="noopener"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="cta_b2">WhatsApp us</span></a></div>
+</div></section>
+
+<div id="footer"></div>
+<script src="assets/main.js"></script>
+</body></html>
