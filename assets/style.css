@@ -70,6 +70,12 @@ nav.main a.active{color:var(--blue)}
 .seg label{text-align:center;padding:.6rem;border-radius:9px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--muted);transition:.2s}
 .seg input{display:none}
 .seg input:checked+label{background:#fff;color:var(--blue);box-shadow:0 3px 10px rgba(10,42,102,.12)}
+.calc-tabs{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-bottom:.75rem}
+.calc-tabs button{border:1.5px solid var(--line);background:#fff;color:var(--muted);padding:.5rem .6rem;border-radius:10px;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;transition:.2s}
+.calc-tabs button.active{border-color:var(--green);background:#eefaf0;color:var(--green)}
+.presets{display:flex;gap:.35rem;margin-top:.3rem;flex-wrap:wrap}
+.presets button{border:1px solid var(--line);background:var(--bg);color:var(--muted);font:inherit;font-size:.7rem;font-weight:600;padding:.18rem .5rem;border-radius:6px;cursor:pointer}
+.presets button:hover{border-color:var(--blue);color:var(--blue)}
 .row{display:grid;gap:.7rem;margin-bottom:.7rem}
 .r2{grid-template-columns:1fr 1fr}.r4{grid-template-columns:repeat(4,1fr)}
 .f label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:.25rem}

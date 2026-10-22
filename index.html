@@ -37,28 +37,60 @@
   <form class="calc">
     <h3 data-i18n="calc_title">Instant Freight Estimate</h3>
     <p class="sub" data-i18n="calc_sub">Get an indicative rate in seconds.</p>
-    <div class="seg">
-      <input type="radio" name="mode" id="m1" value="dropoff" checked><label for="m1"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg><span data-i18n="calc_drop">I'll drop at warehouse</span></label>
-      <input type="radio" name="mode" id="m2" value="collect"><label for="m2"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-i18n="calc_collect">Collect from me</span></label>
+    <input type="hidden" name="ctype" value="parcel">
+    <div class="calc-tabs" role="tablist">
+      <button type="button" class="active" data-ctype="parcel" data-i18n="tab_parcel">Parcel / Pallet (kg)</button>
+      <button type="button" data-ctype="bulk" data-i18n="tab_bulk">Bulk / 34t Truck (Tons)</button>
     </div>
     <div class="row r2">
       <div class="f"><label for="c-from" data-i18n="calc_from">From</label><select id="c-from" name="from"></select></div>
       <div class="f"><label for="c-to" data-i18n="calc_to">To</label><select id="c-to" name="to"></select></div>
     </div>
-    <div class="row r4">
-      <div class="f"><label for="c-l" data-i18n="calc_l">L (cm)</label><input id="c-l" name="l" type="number" min="1" value="50" required></div>
-      <div class="f"><label for="c-w" data-i18n="calc_w">W (cm)</label><input id="c-w" name="w" type="number" min="1" value="40" required></div>
-      <div class="f"><label for="c-h" data-i18n="calc_h">H (cm)</label><input id="c-h" name="h" type="number" min="1" value="40" required></div>
-      <div class="f"><label for="c-qty" data-i18n="calc_qty">Qty</label><input id="c-qty" name="qty" type="number" min="1" value="1" required></div>
+    <div class="parcel-fields">
+      <div class="seg">
+        <input type="radio" name="mode" id="m1" value="dropoff" checked><label for="m1"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg><span data-i18n="calc_drop">I'll drop at warehouse</span></label>
+        <input type="radio" name="mode" id="m2" value="collect"><label for="m2"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-i18n="calc_collect">Collect from me</span></label>
+      </div>
+      <div class="row r4">
+        <div class="f"><label for="c-l" data-i18n="calc_l">L (cm)</label><input id="c-l" name="l" type="number" min="1" value="50" required></div>
+        <div class="f"><label for="c-w" data-i18n="calc_w">W (cm)</label><input id="c-w" name="w" type="number" min="1" value="40" required></div>
+        <div class="f"><label for="c-h" data-i18n="calc_h">H (cm)</label><input id="c-h" name="h" type="number" min="1" value="40" required></div>
+        <div class="f"><label for="c-qty" data-i18n="calc_qty">Qty</label><input id="c-qty" name="qty" type="number" min="1" value="1" required></div>
+      </div>
+      <div class="row r2">
+        <div class="f"><label for="c-kg" data-i18n="calc_kg">Weight per item (kg)</label><input id="c-kg" name="kg" type="number" min="0.1" step="0.1" value="20" required></div>
+        <div class="f"><label for="c-val" data-i18n="calc_val">Goods value (R)</label><input id="c-val" name="value" type="number" min="0" value="5000"></div>
+      </div>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="express"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="calc_exp">Express</span></label>
+        <label class="chip"><input type="checkbox" name="fragile"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg><span data-i18n="calc_frag">Fragile</span></label>
+        <label class="chip"><input type="checkbox" name="insure" checked><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="calc_ins">Insurance</span></label>
+      </div>
     </div>
-    <div class="row r2">
-      <div class="f"><label for="c-kg" data-i18n="calc_kg">Weight per item (kg)</label><input id="c-kg" name="kg" type="number" min="0.1" step="0.1" value="20" required></div>
-      <div class="f"><label for="c-val" data-i18n="calc_val">Goods value (R)</label><input id="c-val" name="value" type="number" min="0" value="5000"></div>
-    </div>
-    <div class="chips">
-      <label class="chip"><input type="checkbox" name="express"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="calc_exp">Express</span></label>
-      <label class="chip"><input type="checkbox" name="fragile"><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg><span data-i18n="calc_frag">Fragile</span></label>
-      <label class="chip"><input type="checkbox" name="insure" checked><svg class="ic-inl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="calc_ins">Insurance</span></label>
+    <div class="bulk-fields" style="display:none">
+      <div class="row r2">
+        <div class="f">
+          <label for="c-tons" data-i18n="calc_tons">Quantity (Tons)</label>
+          <input id="c-tons" name="tons" type="number" min="1" step="1" value="34">
+          <div class="presets">
+            <button type="button" data-tons="34">34t (1 Truck)</button>
+            <button type="button" data-tons="68">68t (2 Trucks)</button>
+            <button type="button" data-tons="60000">60,000t (Monthly)</button>
+          </div>
+        </div>
+        <div class="f">
+          <label for="c-cargo" data-i18n="calc_cargo">Commodity</label>
+          <select id="c-cargo" name="cargo">
+            <option value="coal" data-i18n="cg_coal">Coal / Chrome / Minerals</option>
+            <option value="agri" data-i18n="cg_agri">Beans / Grain / Agri (Backhaul)</option>
+            <option value="const" data-i18n="cg_const">Construction / Steel / Cement</option>
+          </select>
+        </div>
+      </div>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="client_diesel" checked><span data-i18n="calc_diesel">Client supplies diesel (Net)</span></label>
+        <label class="chip"><input type="checkbox" name="backhaul"><span data-i18n="calc_backhaul">Backhaul rate</span></label>
+      </div>
     </div>
     <button class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="calc_btn">Calculate Rate</button>
     <div class="result"></div>

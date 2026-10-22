@@ -27,15 +27,23 @@ const I18N = {
     stat_countries: "Countries", stat_services: "Connected services", stat_account: "Point of accountability",
     // Calculator
     calc_title: "Instant Freight Estimate", calc_sub: "Get an indicative rate in seconds.",
+    tab_parcel: "Parcel / Pallet (kg)", tab_bulk: "Bulk / 34t Truck (Tons)",
     calc_drop: "I'll drop at warehouse", calc_collect: "Collect from me",
     calc_from: "From", calc_to: "To", calc_l: "L (cm)", calc_w: "W (cm)", calc_h: "H (cm)", calc_qty: "Qty",
     calc_kg: "Weight per item (kg)", calc_val: "Goods value (R)",
+    calc_tons: "Quantity (Tons)", calc_cargo: "Commodity",
+    cg_coal: "Coal / Chrome / Minerals", cg_agri: "Beans / Grain / Agri (Backhaul)", cg_const: "Construction / Steel / Cement",
+    calc_diesel: "Client supplies diesel (Net)", calc_backhaul: "Backhaul rate",
     calc_exp: "Express", calc_frag: "Fragile", calc_ins: "Insurance", calc_btn: "Calculate Rate",
     res_total: "Estimated total", res_transit: "Transit", res_days: "days",
     res_dist: "Distance (road est.)", res_cw: "Chargeable weight", res_freight: "Freight",
+    res_rate_ton: "Rate per ton", res_loads: "34t Side-tipper loads", res_inc: "Included", res_inc_val: "Trucks, drivers, tolls & maintenance",
+    res_diesel_lbl: "Diesel", res_diesel_net: "Supplied by client (Net)", res_route_type: "Tariff basis",
+    res_outbound: "Standard outbound", res_back_leg: "Backhaul / return leg",
     res_collect: "Door collection", res_drop: "Warehouse drop-off", res_free: "Free",
     res_border: "Border & customs handling", res_extras: "Express / fragile", res_ins: "Insurance",
     res_note: "Indicative estimate excl. VAT & duties. Final quote confirmed by our team.",
+    res_note_bulk: "Calibrated on 34t side-tipper corridor rates (trucks, drivers, tolls & truck border fees included; product customs clearing & diesel per selection).",
     res_book: "Book this shipment →",
     err_same: "Origin and destination must be different.",
     // Features & Home sections
@@ -126,15 +134,23 @@ const I18N = {
     stat_countries: "Países", stat_services: "Serviços integrados", stat_account: "Ponto de responsabilidade",
     // Calculator
     calc_title: "Cálculo Imediato de Frete", calc_sub: "Obtenha uma estimativa em segundos.",
+    tab_parcel: "Encomenda / Palete (kg)", tab_bulk: "Granel / Camião 34t (Ton)",
     calc_drop: "Entrego no armazém", calc_collect: "Recolher no meu local",
     calc_from: "Origem", calc_to: "Destino", calc_l: "C (cm)", calc_w: "L (cm)", calc_h: "A (cm)", calc_qty: "Qtd",
     calc_kg: "Peso por item (kg)", calc_val: "Valor da carga (R)",
+    calc_tons: "Quantidade (Toneladas)", calc_cargo: "Mercadoria",
+    cg_coal: "Carvão / Crómio / Minerais", cg_agri: "Feijão / Grão / Agro (Retorno)", cg_const: "Construção / Aço / Cimento",
+    calc_diesel: "Cliente fornece diesel (Líquido)", calc_backhaul: "Tarifa de retorno",
     calc_exp: "Expresso", calc_frag: "Frágil", calc_ins: "Seguro", calc_btn: "Calcular Tarifa",
     res_total: "Total estimado", res_transit: "Trânsito", res_days: "dias",
     res_dist: "Distância (est. estrada)", res_cw: "Peso taxável", res_freight: "Frete base",
+    res_rate_ton: "Tarifa por tonelada", res_loads: "Cargas camião 34t", res_inc: "Incluído", res_inc_val: "Camiões, motoristas, portagens e manutenção",
+    res_diesel_lbl: "Diesel", res_diesel_net: "Fornecido pelo cliente (Net)", res_route_type: "Base tarifária",
+    res_outbound: "Ida (Standard)", res_back_leg: "Retorno (Backhaul)",
     res_collect: "Recolha ao domicílio", res_drop: "Entrega no armazém", res_free: "Grátis",
     res_border: "Fronteira e desembaraço", res_extras: "Expresso / frágil", res_ins: "Seguro",
     res_note: "Estimativa indicativa s/ IVA e direitos aduaneiros. Cotação final confirmada pela equipa.",
+    res_note_bulk: "Baseado em camiões basculantes de 34t (inclui camiões, motoristas, portagens e taxas fronteiriças do camião; desembaraço do produto à parte).",
     res_book: "Reservar este envio →",
     err_same: "A origem e o destino devem ser diferentes.",
     // Features & Home sections
@@ -225,15 +241,23 @@ const I18N = {
     stat_countries: "Lande", stat_services: "Geïntegreerde dienste", stat_account: "Punt van verantwoordelikheid",
     // Calculator
     calc_title: "Direkte Vragskatting", calc_sub: "Kry 'n beraamde tarief binne sekondes.",
+    tab_parcel: "Pakket / Palet (kg)", tab_bulk: "Grootmaat / 34t Trok (Ton)",
     calc_drop: "Ek laai by pakhuis af", calc_collect: "Tel by my op",
     calc_from: "Van", calc_to: "Na", calc_l: "L (cm)", calc_w: "B (cm)", calc_h: "H (cm)", calc_qty: "Aantal",
     calc_kg: "Gewig per item (kg)", calc_val: "Goederewaarde (R)",
+    calc_tons: "Hoeveelheid (Ton)", calc_cargo: "Kommoditeit",
+    cg_coal: "Steenkool / Chroom / Minerale", cg_agri: "Bone / Graan / Landbou (Terugvrag)", cg_const: "Konstruksie / Staal / Sement",
+    calc_diesel: "Kliënt verskaf diesel (Netto)", calc_backhaul: "Terugvrag-tarief",
     calc_exp: "Spoed", calc_frag: "Breekbaar", calc_ins: "Versekering", calc_btn: "Bereken Tarief",
     res_total: "Beraamde totaal", res_transit: "Vervoertyd", res_days: "dae",
     res_dist: "Afstand (padberaming)", res_cw: "Belasbare gewig", res_freight: "Vragkoste",
+    res_rate_ton: "Tarief per ton", res_loads: "34t Kantelwa-vragte", res_inc: "Ingesluit", res_inc_val: "Trokke, drywers, tolhekke & instandhouding",
+    res_diesel_lbl: "Diesel", res_diesel_net: "Deur kliënt verskaf (Netto)", res_route_type: "Tariefbasis",
+    res_outbound: "Standaard uitgaande", res_back_leg: "Terugvrag (Backhaul)",
     res_collect: "Deur-opteldiens", res_drop: "Pakhuis-aflaai", res_free: "Gratis",
     res_border: "Grens- & doeanehantering", res_extras: "Spoed / breekbaar", res_ins: "Versekering",
     res_note: "Aanduidende skatting BTW en heffings uitgesluit. Finale kwotasie word deur ons span bevestig.",
+    res_note_bulk: "Gekalibreer op 34t-korridortariewe (trokke, drywers, tolhekke & grensfooie ingesluit; produkklaring & diesel volgens keuse).",
     res_book: "Bespreek hierdie vrag →",
     err_same: "Oorsprong en bestemming moet verskil.",
     // Features & Home sections
@@ -370,40 +394,91 @@ document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 addEventListener("scroll", rev, {passive:true}); rev();
 
 // ---------------- Rate calculator ----------------
+// Calibrated on real corridor benchmark:
+// - Morupule Mine (Botswana) <-> Matola / Maputo Port (Mozambique): 825 km (850 km corridor ref)
+// - Outbound (Coal / Bulk, 34t side-tipper, client supplies diesel): R 1,050 / ton = USD 64.00 / ton (1 load 34t = R 35,700 / USD 2,176)
+// - Backhaul from Matola/Maputo (Beans / Return cargo): R 900 / ton = USD 54.86 / ton (1 load 34t = R 30,600 / USD 1,865)
+const ZAR_PER_USD = 1050 / 64; // 16.40625 (exact alignment between R 1,050/t and USD 64.00/t proforma)
 const CITIES = {
-  "Johannesburg, SA":[-26.20,28.05],"Pretoria, SA":[-25.75,28.19],"Durban, SA":[-29.86,31.03],
-  "Cape Town, SA":[-33.92,18.42],"Gqeberha, SA":[-33.96,25.60],"Bloemfontein, SA":[-29.12,26.21],
-  "Mbombela (Nelspruit), SA":[-25.47,30.97],"Polokwane, SA":[-23.90,29.45],"Komatipoort, SA":[-25.43,31.95],
+  "Johannesburg, SA":[-26.20,28.05],"Pretoria, SA":[-25.75,28.19],"Mbombela (Nelspruit), SA":[-25.47,30.97],
+  "Komatipoort, SA":[-25.43,31.95],"Polokwane, SA":[-23.90,29.45],"Durban, SA":[-29.86,31.03],
+  "Bloemfontein, SA":[-29.12,26.21],"Gqeberha, SA":[-33.96,25.60],"Cape Town, SA":[-33.92,18.42],
+  "Morupule (Palapye), BW":[-22.55,27.13],"Gaborone, BW":[-24.63,25.91],
   "Maputo, MZ":[-25.97,32.57],"Matola, MZ":[-25.96,32.46],"Xai-Xai, MZ":[-25.05,33.64],
   "Inhambane, MZ":[-23.86,35.38],"Beira, MZ":[-19.84,34.84],"Chimoio, MZ":[-19.12,33.48],
   "Tete, MZ":[-16.16,33.59],"Quelimane, MZ":[-17.88,36.89],"Nampula, MZ":[-15.12,39.27],"Pemba, MZ":[-12.97,40.52]
 };
-function km(a,b){const R=6371,r=x=>x*Math.PI/180,[la1,lo1]=CITIES[a],[la2,lo2]=CITIES[b];
+function km(a,b){
+  const pair = [a,b].sort().join("|");
+  if (pair === "Matola, MZ|Morupule (Palapye), BW" || pair === "Maputo, MZ|Morupule (Palapye), BW") return 825;
+  if (pair === "Gaborone, BW|Matola, MZ" || pair === "Gaborone, BW|Maputo, MZ") return 850;
+  const R=6371,r=x=>x*Math.PI/180,[la1,lo1]=CITIES[a],[la2,lo2]=CITIES[b];
   const d=Math.sin(r(la2-la1)/2)**2+Math.cos(r(la1))*Math.cos(r(la2))*Math.sin(r(lo2-lo1)/2)**2;
-  return Math.round(2*R*Math.asin(Math.sqrt(d))*1.25)}
+  return Math.round(2*R*Math.asin(Math.sqrt(d))*1.25);
+}
 const zar = n => "R " + n.toLocaleString("en-ZA",{minimumFractionDigits:2,maximumFractionDigits:2});
+const usd = n => "USD " + n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
 
 function renderCalcResult(form){
   const f = Object.fromEntries(new FormData(form));
   const out = form.querySelector(".result");
   if (f.from === f.to) { alert(t("err_same")); return; }
   const dist = km(f.from, f.to);
+  const cross = f.from.slice(-2) !== f.to.slice(-2);
+  const fromMZ = f.from.endsWith("MZ") && !f.to.endsWith("MZ");
+  const isBackhaul = form.backhaul?.checked || fromMZ || f.cargo === "agri";
+
+  if (f.ctype === "bulk") {
+    const tons = Math.max(1, +f.tons || 34);
+    const loads = Math.ceil(tons / 34);
+    // Exact R 1,050/t (USD 64/t) at 825 km outbound; R 900/t at 825 km backhaul; scaled smoothly across all distances
+    const baseAnchor = isBackhaul ? 900 : 1050;
+    const distFactor = dist === 825 ? 1 : (0.12 + 0.88 * (dist / 825));
+    const netRatePerTon = Math.round(baseAnchor * distFactor);
+    const clientDiesel = form.client_diesel ? form.client_diesel.checked : true;
+    const dieselPerTon = clientDiesel ? 0 : Math.round(dist * 0.42);
+    const ratePerTonZar = netRatePerTon + dieselPerTon;
+    const ratePerTonUsd = ratePerTonZar / ZAR_PER_USD;
+    const totalZar = ratePerTonZar * tons;
+    const totalUsd = ratePerTonUsd * tons;
+    const days = Math.max(1, Math.ceil(dist / 500)) + (cross ? 1 : 0);
+
+    out.innerHTML = `
+      <div class="total"><div><small>${t("res_total")}</small><br><b>${zar(totalZar)}</b><div style="font-size:.85rem;color:#cfe2ff;font-weight:600">≈ ${usd(totalUsd)}</div></div>
+      <div style="text-align:right"><small>${t("res_transit")}</small><br><strong>${days}–${days+1} ${t("res_days")}</strong></div></div>
+      <dl>
+        <dt>${t("res_dist")}</dt><dd>${dist.toLocaleString()} km</dd>
+        <dt>${t("res_rate_ton")}</dt><dd>${zar(ratePerTonZar)} / t (${usd(ratePerTonUsd)} / t)</dd>
+        <dt>${t("res_loads")}</dt><dd>${loads.toLocaleString()} × 34t (${tons.toLocaleString()} t)</dd>
+        <dt>${t("res_route_type")}</dt><dd>${isBackhaul ? t("res_back_leg") : t("res_outbound")}</dd>
+        <dt>${t("res_diesel_lbl")}</dt><dd>${clientDiesel ? t("res_diesel_net") : zar(dieselPerTon * tons)}</dd>
+        <dt>${t("res_inc")}</dt><dd>${t("res_inc_val")}</dd>
+      </dl>
+      <p class="note">${t("res_note_bulk")}</p>
+      <a class="btn" href="contact.html?route=${encodeURIComponent(f.from+" → "+f.to+" ("+tons+"t bulk)")}&est=${Math.round(totalZar)}">${t("res_book")}</a>`;
+    out.classList.add("show");
+    return;
+  }
+
+  // Parcel / Pallet (kg) mode — calibrated to the same 825 km corridor curve + backhaul discount
   const qty = Math.max(1, +f.qty || 1);
   const vol = (+f.l * +f.w * +f.h) / 5000;
   const actual = +f.kg || 0;
   const charge = Math.max(actual, vol) * qty;
-  const cross = f.from.slice(-2) !== f.to.slice(-2);
-  let base = 150 + dist * 2.1 + charge * (4 + dist * 0.004);
-  const pickup = f.mode === "collect" ? 250 + charge * 0.8 : 0;
+  // Base LTL/parcel rate anchored on corridor haulage (R 1.27/ton-km bulk floor + LTL consolidation handling)
+  const backhaulMult = fromMZ ? (900 / 1050) : 1;
+  let base = (160 + dist * 1.45 + charge * (2.6 + (dist / 825) * 3.8)) * backhaulMult;
+  const pickup = f.mode === "collect" ? 250 + charge * 0.75 : 0;
   const border = cross ? 650 : 0;
   let extras = 0;
   if (form.express?.checked) extras += base * 0.35;
   if (form.fragile?.checked) extras += base * 0.12;
   const insurance = form.insure?.checked ? Math.max(80, (+f.value || 0) * 0.015) : 0;
   const total = base + pickup + border + extras + insurance;
+  const totalUsd = total / ZAR_PER_USD;
   const days = Math.max(1, Math.ceil(dist / 550)) + (cross ? 1 : 0) - (form.express?.checked ? 1 : 0);
   out.innerHTML = `
-    <div class="total"><div><small>${t("res_total")}</small><br><b>${zar(total)}</b></div>
+    <div class="total"><div><small>${t("res_total")}</small><br><b>${zar(total)}</b><div style="font-size:.85rem;color:#cfe2ff;font-weight:600">≈ ${usd(totalUsd)}</div></div>
     <div style="text-align:right"><small>${t("res_transit")}</small><br><strong>${Math.max(1,days)}–${Math.max(1,days)+1} ${t("res_days")}</strong></div></div>
     <dl>
       <dt>${t("res_dist")}</dt><dd>${dist.toLocaleString()} km</dd>
@@ -424,6 +499,43 @@ function initCalc(form){
   form.querySelector("[name=from]").innerHTML = opts;
   form.querySelector("[name=to]").innerHTML = opts;
   form.from.value = "Johannesburg, SA"; form.to.value = "Maputo, MZ";
+
+  // Mode tabs: Parcel/Pallet vs Bulk/34t Truck
+  const tabs = form.querySelectorAll(".calc-tabs button");
+  const pFields = form.querySelector(".parcel-fields");
+  const bFields = form.querySelector(".bulk-fields");
+  tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tabs.forEach(b => b.classList.toggle("active", b === btn));
+      const mode = btn.dataset.ctype;
+      form.ctype.value = mode;
+      pFields.style.display = mode === "parcel" ? "" : "none";
+      bFields.style.display = mode === "bulk" ? "" : "none";
+      if (mode === "bulk" && form.from.value === "Johannesburg, SA" && form.to.value === "Maputo, MZ") {
+        form.from.value = "Morupule (Palapye), BW";
+        form.to.value = "Matola, MZ";
+      }
+      if (form.querySelector(".result.show")) renderCalcResult(form);
+    });
+  });
+
+  // Quick tonnage presets (34t, 68t, 60,000t)
+  form.querySelectorAll(".presets button").forEach(pb => {
+    pb.addEventListener("click", () => {
+      form.tons.value = pb.dataset.tons;
+      renderCalcResult(form);
+    });
+  });
+
+  // Auto-toggle backhaul when commodity or origin changes
+  form.cargo?.addEventListener("change", () => {
+    if (form.cargo.value === "agri" && form.backhaul) form.backhaul.checked = true;
+    else if (form.backhaul && !form.from.value.endsWith("MZ")) form.backhaul.checked = false;
+  });
+  form.from.addEventListener("change", () => {
+    if (form.backhaul) form.backhaul.checked = form.from.value.endsWith("MZ") && !form.to.value.endsWith("MZ");
+  });
+
   form.addEventListener("submit", e => { e.preventDefault(); renderCalcResult(form); });
 }
 document.querySelectorAll("form.calc").forEach(initCalc);
